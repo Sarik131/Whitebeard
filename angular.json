@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["lodash"],
             "outputPath": "dist/whitebeards",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -34,7 +35,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "325kb",
                   "maximumError": "1mb"
                 },
                 {
