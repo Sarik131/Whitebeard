@@ -6,11 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatalogRepositoryService } from './catalog/catalog-repository.service';
 import { CatalogComponent } from "./catalog/catalog.component";
-import { LoadingSpinnerComponent } from "./components/loading-spinner.component";
-import { UserRepositoryService } from "./services/user-repository.service";
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 import { RegisterComponent } from "./users/register.component";
 import { SignInComponent } from "./users/sign-in.component";
-import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -18,10 +17,10 @@ import { CoreModule } from './core/core.module';
     CatalogComponent,
     RegisterComponent,
     SignInComponent,
-    LoadingSpinnerComponent,
   ],
   imports: [
     CoreModule,
+    SharedModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
