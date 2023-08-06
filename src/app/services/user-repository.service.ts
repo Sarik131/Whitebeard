@@ -4,7 +4,9 @@ import { EMPTY, Observable, throwError, timer } from 'rxjs';
 
 import { IUser } from '../users/user.model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class UserRepositoryService {
   currentUser: IUser | null = null;
 
@@ -38,8 +40,8 @@ export class UserRepositoryService {
 
     this.currentUser = {
       ...this.currentUser,
-      classes: this.currentUser.classes.filter((c: string) => c !== classId) 
-      };
+      classes: this.currentUser.classes.filter((c: string) => c !== classId)
+    };
 
     return timer(1000);
   }
