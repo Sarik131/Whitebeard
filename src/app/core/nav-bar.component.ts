@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { UserRepositoryService } from "../services/user-repository.service";
 
 @Component({
-  selector: 'nav-bar',
+  selector: 'wb-nav-bar',
   styleUrls: [`./nav-bar.component.css`],
   template: `
     <div class="nav-bar">
       <img class="logo" src="/assets/images/whitebeard-logo.png" alt="Whitebeard Logo" />
       <div class="nav-item"><a [routerLink]="['/catalog']">Catalog</a></div>
-      <account-menu [user]="currentUser" (signedOut)="handleSignOut()"></account-menu>
+      <wb-account-menu [user]="currentUser" (signedOut)="handleSignOut()"></wb-account-menu>
     </div>
 `
 })
