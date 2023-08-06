@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { RegisterComponent } from './register.component';
 import { SignInComponent } from './sign-in.component';
+import { UsersRoutingModule } from './users-routing.module';
 
 
 
@@ -12,6 +13,7 @@ import { SignInComponent } from './sign-in.component';
     ReactiveFormsModule,
     FormsModule,
     RouterModule,
+    UsersRoutingModule,
     SharedModule
   ],
   declarations: [SignInComponent, RegisterComponent],
