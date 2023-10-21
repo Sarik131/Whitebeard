@@ -2,17 +2,18 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { UserRepositoryService } from '../services/user-repository.service';
+import { Credentials } from './user.model';
 
 @Component({
   styleUrls: ['./sign-in.component.css'],
   templateUrl: './sign-in.component.html'
 })
 export class SignInComponent {
-  credentials: any = {};
+  credentials: Credentials = new Credentials();
 
   constructor(private router: Router, private userRepository: UserRepositoryService) { }
 
-  signIn(credentials: any) {
+  signIn(credentials: Credentials) {
     this.userRepository.signIn(credentials)
       .subscribe({
         error: (err) => { console.error(err, 'Error') },
